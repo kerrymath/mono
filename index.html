@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monopoloy</title>
+</head>
+<body>
+  <style>
+    .dice {
+      display:none;
+      width: 200px;
+      height: 200px;
+      margin: 2% auto;
+      background: url(./assets/dice_sprite.png);
+      background-repeat: no-repeat;
+    }
+    .ani {
+      animation: play .6s steps(6) infinite;
+    }
+    .d1 {
+      background-position: -35px -37px;
+    }
+    .d2 {
+      background-position: -335px -37px;
+    }
+    .d3 {
+      background-position: -645px -37px;
+    }
+    .d4 {
+      background-position: -35px -325px
+    }
+    .d5 {
+      background-position: -335px -325px;
+    }
+    .d6 {
+      background-position: -645px -325px;
+    }
+    .display {
+      display: inline-block;
+    }
+
+    @keyframes play {
+        20% { background-position: -35px -325px; }
+        40% { background-position: -335px -37px; }
+        60% { background-position: -335px -325px; }
+        80% { background-position: -645px -37px; }
+        100% { background-position: -645px -325px; }
+    }
+    .diceBtn, .reset {
+      width: 250px;
+      height: 100px;
+      font-size: 30px;
+      margin-bottom: 50px;
+    }
+    .text-center {
+      text-align: center;
+      font-size: 2em;
+    }
+    .card-container {
+      display: flex;
+      justify-content: center;
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 800px;
+      height: 400px;
+      border: 5px dashed grey;
+      padding: 20px;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+    .chance {
+      background-color: orange;
+    }
+    .community {
+      background-color: lightblue;
+    }
+    .reset-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+    .reset-container div {
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  </style>
+  <h1 class="text-center">Monopoloy</h1>
+  <div class="dice_container text-center">
+    <div id="dice1" class="dice display d1"></div>
+    <div id="dice2" class="dice display d2"></div>
+    <div class="text-center"><button class="diceBtn">roll dice</button></div>
+  </div>
+
+  <div class="card-container">
+    <div class="chance card">
+      <div class="card-text text-center">Chance</div>
+    </div>
+    
+    <div class="community card">
+      <div class="card-text text-center">Community</div>
+    </div>
+  </div>
+  
+  <div class="reset-container">
+    <div>
+      <button class="reset chance">Reset chance cards</button>
+    </div>
+    <div>
+      <button class="reset community">Reset community cards</button>
+    </div>
+  </div>
+  <script src="./dist/main.js"></script>
+</body>
+</html>
