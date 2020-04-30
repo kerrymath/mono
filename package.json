@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "serve": "^11.3.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
